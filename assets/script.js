@@ -2,7 +2,7 @@ let allMovies = []
 
 function addFilm() {
     let linkImage = document.getElementById('input').value;
-    let listFilms = document.querySelector('.list-films');
+    let listFilms = document.querySelector('.box-movies');
 
     allMovies.push(linkImage)
     document.querySelector('#input').value = ''
@@ -16,9 +16,7 @@ function viewFilms(listFilms) {
 
     allMovies.forEach((item) => {
         newLi += `
-        <li class="film">
-            <img src="${item}">
-        </li>
+            <img class="film" src="${item}">
         `
         
         listFilms.innerHTML = newLi
